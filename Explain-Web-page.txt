@@ -1,0 +1,26 @@
+Write a python program that refresh my chrome browser pager every 20 seconds
+
+To refresh your Chrome browser page every 20 seconds using Python, you can use the Selenium library. Here's an example code:
+
+python
+Copy code
+from selenium import webdriver
+import time
+
+# Initialize the Chrome driver
+driver = webdriver.Chrome()
+
+# Navigate to the webpage you want to refresh
+driver.get("https://www.example.com")
+
+while True:
+    # Wait for 20 seconds
+    time.sleep(20)
+
+    # Refresh the webpage
+    driver.refresh()
+In this code, we first import the necessary libraries - webdriver from Selenium and time for waiting. Then, we initialize the Chrome driver using webdriver.Chrome(). You may need to specify the path to the Chrome driver if it's not already in your system's PATH variable.
+
+Next, we navigate to the webpage you want to refresh using driver.get(). Replace the URL with the webpage you want to refresh.
+
+Finally, we set up a while loop that runs indefinitely. Inside the loop, we wait for 20 seconds using time.sleep(20) and then refresh the webpage using driver.refresh(). The loop continues indefinitely, refreshing the webpage every 20 seconds.
